@@ -12,6 +12,6 @@ jobs:
       - name: Print a message
         run: echo Hello from github actions!
       - name: Show the date
-        run: echo "today is $(date)""
+        run: echo "today is $(date)"
       - name: Show which folder we are in
         run: $(pwd)
