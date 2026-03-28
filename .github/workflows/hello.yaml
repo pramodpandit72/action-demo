@@ -1,0 +1,17 @@
+name: Hello World
+
+on:
+push:
+branches: [ main ]
+
+jobs:
+say-hello:
+runs-on: windows-latest
+
+steps:
+- name: Print a message
+run: echo Hello from github actions!
+- name: Show the date
+run: echo "today is $(date)""
+- name: Show which folder we are in
+run: cd
