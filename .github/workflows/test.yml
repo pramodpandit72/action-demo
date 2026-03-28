@@ -4,7 +4,7 @@ on:
   push:
     branches: [ main ]
   pull_request:
-   branches: [ main ]
+    branches: [ main ]
 
 jobs: 
   test:
@@ -14,12 +14,13 @@ jobs:
       - name: Step 1 - Download the repository code
         uses: actions/checkout@v4
 
-      - name: Step 2 - Install Node.jobs
+      - name: Step 2 - Install Node.js
         uses: actions/setup-node@v4
         with: 
           node-version: '20' 
 
       - name: Step 3 - Install project dependencies
-        run: npm Install
-      - name: Step 4 - run the Tests
+        run: npm install
+
+      - name: Step 4 - Run the tests
         run: npm test
